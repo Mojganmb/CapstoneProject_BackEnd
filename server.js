@@ -23,7 +23,6 @@ app.use("/*", (req, res) => {
   res.sendFile(__dirname + "/client/index.html");
 });
 
-console.log("db adress",process.env.DB_ADDRESS);
 mongoose
   .connect(process.env.DB_ADDRESS)
   .then(() => {
